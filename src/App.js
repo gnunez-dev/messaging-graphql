@@ -17,7 +17,7 @@ const QUERY = `
 
 function App() {
   const [result, reExecuteQuery] = useQuery({query: QUERY});
-  console.log({result});
+  console.log({result, reExecuteQuery});
   return (
     <div className="App">
       <header className="App-header">
