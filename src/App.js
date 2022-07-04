@@ -1,7 +1,23 @@
 import logo from './logo.svg';
 import './App.css';
+import {useQuery} from 'urql';
+
+const QUERY = `
+  query{
+    allPets{
+      name
+      weight
+      category
+      inCareOf{
+        name
+      }
+    }
+  }
+`;
 
 function App() {
+  const [result, reExecuteQuery] = useQuery({query: QUERY});
+  console.log({result});
   return (
     <div className="App">
       <header className="App-header">
