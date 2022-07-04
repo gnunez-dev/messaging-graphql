@@ -1,0 +1,1 @@
+export const CLIENT_URL = 'https://pet-library.moonhighway.com/';
